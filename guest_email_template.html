@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .header {
+        background: #1a1a1a;
+        color: #fff;
+        padding: 30px;
+        border-radius: 8px 8px 0 0;
+        text-align: center;
+      }
+      .content {
+        border: 1px solid #eee;
+        padding: 30px;
+        border-radius: 0 0 8px 8px;
+      }
+      .btn {
+        display: inline-block;
+        padding: 12px 24px;
+        background: #c29d5f;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 4px;
+        font-weight: bold;
+        margin: 20px 0;
+      }
+      .important {
+        background: #fff9e6;
+        border-left: 4px solid #f0ad4e;
+        padding: 15px;
+        margin: 20px 0;
+      }
+      .gdpr {
+        font-size: 11px;
+        color: #888;
+        margin-top: 40px;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <h2>Your Residential Lease in Kraków</h2>
+    </div>
+    <div class="content">
+      <p>Dear {{ GUEST_NAME }},</p>
+
+      <p>
+        We are delighted to host you at <strong>{{ LISTING_NAME }}</strong> from
+        {{ CHECKIN_DATE }} to {{ CHECKOUT_DATE }}.
+      </p>
+
+      <div class="important">
+        <strong>Agreement & Implied Consent / Umowa i zgoda dorozumiana:</strong
+        ><br />
+        As this is a residential stay exceeding 30 days, we have prepared a
+        bilingual rental agreement for you.
+        <strong>Please note:</strong> Providing access codes and your subsequent
+        entry into the apartment constitutes acceptance of the agreement terms
+        (implied consent).
+      </div>
+
+      <p>You can download your agreement here:</p>
+      <a href="{{ AGREEMENT_LINK }}" class="btn"
+        >Download Rental Agreement (PDF)</a
+      >
+
+      <p>
+        <strong>Key Info:</strong><br />
+        - Residential purpose only.<br />
+        - No hotel services (no periodic cleaning).<br />
+        - Only one-time turnover cleaning after your stay is included.
+      </p>
+
+      <p>Best regards,<br />{{ LANDLORD_NAME }}</p>
+
+      <div class="gdpr">
+        <strong>GDPR / RODO:</strong> Data controller: {{ LANDLORD_NAME }}. Data
+        is processed to perform the rental agreement (Art. 6.1.b GDPR).
+        Recipients include Airbnb (platform/payment) and our IT infrastructure
+        providers. Full notice available upon request or via the booking thread.
+      </div>
+    </div>
+  </body>
+</html>
