@@ -130,18 +130,18 @@ def generate_summary_markdown(year, month, reservations, total_revenue, tax_amou
     
     month_name = month_names_pl[month - 1]
     
-    md = f"""# Podsumowanie Finansowe - {month_name} {year}
+    md = f"""# Podsumowanie Finansowe Najmu - {month_name} {year}
 
 ---
 
 ## 💰 Przychody
 
 - **Liczba umów najmu:** {len(reservations)}
-- **Łączny przychód (netto do Wynajmującego):** {total_revenue:,.2f} PLN
+- **Łączny przychód (kwota wypłaty):** {total_revenue:,.2f} PLN
 
 ---
 
-## 📊 Podatek (Ryczałt od najmu prywatnego - 8.5%)
+## 📊 Podatek (Ryczałt od najmu - 8.5%)
 
 - **Podstawa opodatkowania:** {total_revenue:,.2f} PLN
 - **Stawka:** 8.5%
@@ -180,7 +180,7 @@ def generate_summary_markdown(year, month, reservations, total_revenue, tax_amou
 ## 📝 Uwagi
 
 - Wszystkie kwoty w PLN
-- Stawka podatku: 8.5% (Art. 30a ust. 1 pkt 2 ustawy o PIT - wynajem prywatny)
+- Stawka podatku: 8.5% (Art. 12 ust. 1 pkt 4 lit. a) ustawy o zryczałtowanym podatku dochodowym)
 - Podstawa prawna zwolnienia z VAT: Art. 43 ust. 1 pkt 36 ustawy o VAT
 - Klasyfikacja PKWiU: 68.20.11.0 (Wynajem i dzierżawa własnych nieruchomości mieszkalnych)
 
@@ -208,7 +208,7 @@ Dzień dobry,
 Przesyłam dokumentację księgową za {month_name} {year}:
 
 📊 PODSUMOWANIE:
-- Przychód (netto): {total_revenue:,.2f} PLN
+- Przychód (kwota wypłaty): {total_revenue:,.2f} PLN
 - Podatek ryczałt (8.5%): {tax_amount} PLN
 - Liczba umów najmu: {len(reservations)}
 
@@ -226,10 +226,10 @@ Przesyłam dokumentację księgową za {month_name} {year}:
     
     template += f"""
 💼 INFORMACJE DODATKOWE:
-- Rodzaj działalności: Wynajem lokali mieszkalnych (najem prywatny)
+- Rodzaj działalności: Wynajem lokali mieszkalnych w ramach JDG
 - Zwolnienie z VAT: Art. 43 ust. 1 pkt 36 (cel mieszkaniowy)
 - PKWiU: 68.20.11.0
-- Forma opodatkowania: Ryczałt 8.5%
+- Forma opodatkowania: Ryczałt 8.5% (Art. 12 ust. 1 pkt 4 lit. a) ustawy o ryczałcie)
 
 Proszę o potwierdzenie otrzymania dokumentów.
 
