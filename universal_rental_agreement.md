@@ -41,7 +41,7 @@ Strony oświadczają, że najem ma charakter **wyłącznie mieszkaniowy** (zgodn
 
 **Zabrania się:**
 
-- wykorzystywanie lokalu do celów usługowych, biurowych lub hotelowych,
+- wykorzystywanie lokalu do celów turystycznych, usługowych, biurowych lub hotelowych,
 - krótkotrwałe zakwaterowanie osób trzecich,
 - dalszy podnajem na doby lub tygodnie.
 
@@ -55,7 +55,7 @@ The Parties declare that the lease is of an **exclusively residential nature** (
 
 **Prohibited uses include:**
 
-- using the premises for commercial, office, or hotel purposes,
+- using the premises for tourism, commercial, office, or hotel purposes,
 - short-term accommodation of third parties,
 - subletting on a daily or weekly basis.
 
@@ -67,13 +67,17 @@ The Landlord applies VAT exemption under Art. 43(1)(36) of the VAT Act, as it sa
 
 **Polski:**
 
-Całkowity czynsz najmu za cały okres najmu, obejmujący również ryczałt na pokrycie kosztów doprowadzenia lokalu do stanu pierwotnego po zakończeniu najmu, wynosi **{{ TOTAL_PRICE }} PLN**.
+Całkowity czynsz należny Wynajmującemu za cały okres najmu, obejmujący również ryczałt na pokrycie kosztów doprowadzenia lokalu do stanu pierwotnego po zakończeniu najmu, wynosi **{{ TOTAL_PRICE }} PLN**.
+
+Kwota ta nie obejmuje opłat serwisowych platformy rezerwacyjnej, które Najemca uiszcza bezpośrednio na rzecz platformy rezerwacyjnej.
 
 Czynsz najmu płatny jest z góry za cały okres najmu. Zapłata może być dokonana za pośrednictwem systemu płatności udostępnionego przez pośrednika (np. platformę rezerwacyjną). Wynajmujący potwierdza otrzymanie płatności.
 
 **English:**
 
-The total rent for the entire rental period, including a lump sum covering the costs of restoring the premises to their original condition after the end of the lease, is **{{ TOTAL_PRICE }} PLN**.
+The total rent payable to the Landlord for the entire rental period, including a lump sum covering the costs of restoring the premises to their original condition after the end of the lease, is **{{ TOTAL_PRICE }} PLN**.
+
+This amount does not include the booking platform's service fees, which the Tenant pays directly to the booking platform.
 
 The rent is payable in advance for the entire rental period. Payment may be made through the payment system provided by an intermediary (e.g., a booking platform). The Landlord confirms receipt of payment.
 
@@ -118,6 +122,8 @@ Strony zgodnie ustalają, że umowa zostaje zawarta przy zaistnieniu łącznie n
 1. potwierdzenie rezerwacji i płatność za pośrednictwem pośrednika,
 2. wysłanie treści umowy na adres email lub skrzynkę wiadomości Najemcy podaną przy rezerwacji, co stanowi skuteczne doręczenie,
 3. przekazanie kodów dostępu lub kluczy Najemcy.
+
+Kolejność powyższych czynności nie musi być zachowana.
 
 Dokonanie rezerwacji i zapłaty oraz objęcie lokalu w posiadanie po otrzymaniu treści umowy jest równoznaczne z potwierdzeniem zapoznania się z jej treścią i jej akceptacją (_per facta concludentia_).
 
