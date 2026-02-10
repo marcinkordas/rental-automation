@@ -88,12 +88,13 @@ def main():
         end_date = parse_date(res.get('End date'))
         booking_date = parse_date(res.get('Booking date')) # Agreement Date
         
-        # Financials
+        # Financials - Use GROSS EARNINGS for tax compliance
+        # Gross earnings = Amount + Service fee = taxable income before Host fee deduction
         try:
-            amount = float(res.get('Amount', '0').replace(',', ''))
+            gross_earnings = float(res.get('Gross earnings', '0').replace(',', ''))
             cleaning = float(res.get('Cleaning fee', '0').replace(',', ''))
         except:
-            amount = 0.0
+            gross_earnings = 0.0
             cleaning = 0.0
             
         # Determine Folder (YYYY-MM)
@@ -112,7 +113,7 @@ def main():
             'CHECKOUT_DATE': end_date.strftime('%d.%m.%Y'),
             'DATA_ZAWARCIA': start_date.strftime('%d.%m.%Y'), # Agreement Date = Check-in Date
             'NIGHTS_COUNT': res.get('Nights', '30'),
-            'TOTAL_PRICE': f"{amount:.2f}",
+            'TOTAL_PRICE': f"{gross_earnings:.2f}",  # Gross earnings = taxable income
             'CLEANING_FEE': f"{cleaning:.2f}",
         }
         
